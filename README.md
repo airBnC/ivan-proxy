@@ -1,13 +1,13 @@
 # Project Name
 
-> Project description
+> airbnc proxy server
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/airBnc/booking-module
+  - https://github.com/airBnc/reviews-module
+  - https://github.com/airBnc/calendar-module
+  - https://github.com/airBnc/property-info-module
 
 ## Table of Contents
 
@@ -17,7 +17,9 @@
 
 ## Usage
 
-> Some usage instructions
+> Pull newest versions of modules
+> Run all modules
+> Run proxy server
 
 ## Requirements
 
@@ -33,7 +35,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
+npm start
 ```
 

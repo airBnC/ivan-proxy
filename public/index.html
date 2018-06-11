@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <script>
+        window.id = window.location.pathname.match(/[0-9]+/) || [1];
+    </script>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="main-container">
+        <div class="sub-container-1">
+          <div id="Info">Info goes here</div>
+          <div id="Reviews">Reviews go here</div>
+          <div id="Calendar">Calendar goes here</div>
+        </div>
+        <div class="sub-container-1">
+            <div id="Booking">Booking goes here</div>
+        </div>
+    </div>
+    <script>
+        let script = document.createElement('script');
+        script.src = `http://localhost:3003/rooms/${window.id}/bundle.js`;
+        document.body.append(script);
+    </script>
+    <script>
+      document.onreadystatechange = function() {
+        if (document.readyState === 'complete') {
+          ReactDOM.render(
+            React.createElement(Info),
+            document.getElementById('Info')
+          );
+        }
+      }
+      // ReactDOM.render(
+      //   React.createElement(Info),
+      //   document.getElementById('Booking')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(Info),
+      //   document.getElementById('Reviews')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(Info),
+      //   document.getElementById('Calendar')
+      // );
+    </script>
+  </body>
+</html>
