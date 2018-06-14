@@ -1,14 +1,9 @@
-.sub-container-1 {
-
-}
-
 #main-container {
   width: 80%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 
 #Info {
@@ -21,17 +16,16 @@
   flex-grow: 0;
   flex-shrink: 1;
   max-width: 650px;
-  border: solid red 1px;
 }
 
 #Calendar {
   flex-grow: 0;
   flex-shrink: 1;
   max-width: 650px;
-  border: solid red 1px;
 }
 
 #Booking {
   width: 450px;
-  border: solid red 1px;
+  position: fixed;
+  padding-left: 50px;
 }

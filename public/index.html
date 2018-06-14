@@ -5,8 +5,6 @@
     <script>
         window.id = window.location.pathname.match(/[0-9]+/) || [1];
     </script>
-    <script src="../node_modules/react/umd/react.development.js"></script>
-    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
   </head>
   <body>
     <div id="main-container">
@@ -21,30 +19,17 @@
     </div>
     <script>
         let script = document.createElement('script');
-        script.src = `http://localhost:3003/rooms/${window.id}/bundle.js`;
+        script.src = `http://ec2-18-217-35-168.us-east-2.compute.amazonaws.com/rooms/${window.id}/infobundle.js`;
         document.body.append(script);
-    </script>
-    <script>
-      document.onreadystatechange = function() {
-        if (document.readyState === 'complete') {
-          ReactDOM.render(
-            React.createElement(Info),
-            document.getElementById('Info')
-          );
-        }
-      }
-      // ReactDOM.render(
-      //   React.createElement(Info),
-      //   document.getElementById('Booking')
-      // );
-      // ReactDOM.render(
-      //   React.createElement(Info),
-      //   document.getElementById('Reviews')
-      // );
-      // ReactDOM.render(
-      //   React.createElement(Info),
-      //   document.getElementById('Calendar')
-      // );
+        script = document.createElement('script');
+        script.src = `http://localhost:3004/rooms/${window.id}/Reviewsbundle.js`;
+        document.body.append(script);
+        script = document.createElement('script');
+        script.src = `http://localhost:3002/rooms/${window.id}/dist/bookingbundle.js`;
+        document.body.append(script);
+        // script = document.createElement('script');
+        // script.src = `http://localhost:3004/rooms/${window.id}/bundle.js`;
+        // document.body.append(script);
     </script>
   </body>
 </html>
