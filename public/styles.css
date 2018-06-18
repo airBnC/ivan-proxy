@@ -1,31 +1,61 @@
-#main-container {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+html{
+  all: initial;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  all: initial;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+#img-container {
+  width:100%;
+}
+
+#sub-container-1 {
+  max-width: 650px;
+  min-height: 800px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  margin-left: 14%;
+}
+
+#sub-container-2 {
+  width: 25%;
+  min-height: 50px;
+  display: inline-block;
+  position: sticky;
+  top: 0px;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
 }
 
 #Info {
-  flex-grow: 0;
-  flex-shrink: 1;
-  max-width: 650px;
+  min-height: 10em;
 }
 
 #Reviews {
-  flex-grow: 0;
-  flex-shrink: 1;
-  max-width: 650px;
+
 }
 
 #Calendar {
-  flex-grow: 0;
-  flex-shrink: 1;
-  max-width: 650px;
+
 }
 
 #Booking {
-  width: 450px;
-  position: fixed;
-  padding-left: 50px;
+
 }

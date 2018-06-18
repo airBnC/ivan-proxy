@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./styles.css" />
+      <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         window.id = window.location.pathname.match(/[0-9]+/) || [1];
     </script>
   </head>
   <body>
-    <div id="main-container">
-        <div class="sub-container-1">
-          <div id="Info">Info goes here</div>
-          <div id="Reviews">Reviews go here</div>
-          <div id="Calendar">Calendar goes here</div>
-        </div>
-        <div class="sub-container-1">
-            <div id="Booking">Booking goes here</div>
-        </div>
+    <div id="img-container">
+        <img src="./images/Screen Shot 2018-06-16 at 11.07.15 AM.jpg"/>
     </div>
+    <div id="sub-container-1">
+      <div id="Info"></div>
+      <div id="Reviews"></div>
+      <div id="app"></div>
+    </div>
+    <div id="sub-container-2">
+        <div id="Booking"></div>
+    </div>
+    
     <script>
         let script = document.createElement('script');
         script.src = `http://ec2-18-217-35-168.us-east-2.compute.amazonaws.com/rooms/${window.id}/infobundle.js`;
         document.body.append(script);
         script = document.createElement('script');
-        script.src = `http://localhost:3004/rooms/${window.id}/Reviewsbundle.js`;
+        script.src = `http://ec2-54-241-139-163.us-west-1.compute.amazonaws.com/rooms/${window.id}/reviewsBundle.js`;
         document.body.append(script);
         script = document.createElement('script');
-        script.src = `http://localhost:3002/rooms/${window.id}/dist/bookingbundle.js`;
+        script.src = `http://ec2-34-210-45-213.us-west-2.compute.amazonaws.com/rooms/${window.id}/dist/bookingbundle.js`;
         document.body.append(script);
-        // script = document.createElement('script');
-        // script.src = `http://localhost:3004/rooms/${window.id}/bundle.js`;
+        script = document.createElement('script');
+        script.src = `http://localhost:3001/rooms/${window.id}/dist/bundle.js`;
         // document.body.append(script);
     </script>
+    <link rel="stylesheet" href="./styles.css" />
   </body>
 </html>
